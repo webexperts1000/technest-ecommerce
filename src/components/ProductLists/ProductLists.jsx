@@ -262,12 +262,15 @@ function ProductLists() {
   }, [dispatch]);
 
   useEffect(() => {
+    console.log("Loaded products:", products);
     if (products.length > 0) {
       const prices = products.map((item) => item.price);
+      console.log("Extracted prices:", prices);
       const max = Math.max(...prices);
+      console.log("Calculated max price:", max);
       setMaxPriceDisplay(max);
       setPriceRange(max);
-      setList(products); // set all products initially
+      setList(products);
     }
   }, [products]);
 
@@ -334,6 +337,8 @@ function ProductLists() {
   const addToCartHandler = (product) => {
     dispatch(addToCart({ ...product, product_id: product._id, qty: quantity }));
   };
+
+  console.log("priceRange:", priceRange, "maxPriceDisplay:", maxPriceDisplay, "list:", list);
 
   return (
     <div className="products_lists">
