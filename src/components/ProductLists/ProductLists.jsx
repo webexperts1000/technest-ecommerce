@@ -28,15 +28,25 @@ function ProductLists() {
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
-  let priceArr = products.map((item) => item.price);
-  let maxPrice = Math.max(...priceArr);
+  // let priceArr = products.map((item) => item.price);
+  // let maxPrice = Math.max(...priceArr);
+
+  // useEffect(() => {
+  //   if (maxPrice) {
+  //     setPrice(maxPrice);
+  //     setPriceRange(maxPrice); 
+  //   }
+  // }, [maxPrice]);
 
   useEffect(() => {
-    if (maxPrice) {
-      setPrice(maxPrice);
-      setPriceRange(maxPrice); 
+    if (products.length > 0) {
+      const prices = products.map((item) => item.price);
+      const max = Math.max(...prices);
+      setPrice(max);
+      setPriceRange(max); // Optional: sync both sliders
     }
-  }, [maxPrice]);
+  }, [products]);
+  
 
   React.useEffect(() => {
     console.log("Dispatching getProducts()");
