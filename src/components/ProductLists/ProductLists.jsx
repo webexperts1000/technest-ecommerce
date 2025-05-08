@@ -31,6 +31,7 @@ function ProductLists() {
   useEffect(() => {
     if (maxPrice) {
       setPrice(maxPrice);
+      setPriceRange(maxPrice); 
     }
   }, [maxPrice]);
 
