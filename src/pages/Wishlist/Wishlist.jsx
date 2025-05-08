@@ -56,7 +56,7 @@ function Wishlist() {
 
                   <div className="info_box">
                     <h2> {item.product_name} </h2>
-                    <div className="price"> ${item.product_price} </div>
+                    <div className="price"> Rs. {item.product_price} </div>
                   </div>
 
                   <div className="flex-btns">

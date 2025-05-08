@@ -51,7 +51,7 @@ function MyOrders() {
                 {order.orderItems.length}
               </div>
               <div className="cell" data-title="Total Amount">
-                ${order.totalPrice}
+                Rs. {order.totalPrice}
               </div>
             </div>
           </Fragment>

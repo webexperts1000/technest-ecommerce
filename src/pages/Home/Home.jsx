@@ -17,7 +17,7 @@ function Home() {
         <div className="home-content">
           <div className="content">
             <h2> Lahore's Latest Tech Shopping </h2>
-            <h3>Start Shopping for the Best Tech Products in Lahore</h3>
+            <h1>Start Shopping for the Best Tech Products in Lahore</h1>
           </div>
 
           <div className="play_icon">

@@ -100,7 +100,7 @@ function Cart() {
                             </div>
                           </td>
                           <td className="name">{item.name}</td>
-                          <td className="price">${item.price}.00</td>
+                          <td className="price">Rs. {item.price}.00</td>
                           <td>
                             <div className="qty_div">
                               <span
@@ -167,7 +167,7 @@ function Cart() {
 
           <div className="sub-total">
             <h2>Sub Total:</h2>
-            <h2>${totalPrice().toLocaleString()}.00</h2>
+            <h2>Rs. {totalPrice().toLocaleString()}.00</h2>
           </div>
 
           <div className="shipping">
@@ -177,7 +177,7 @@ function Cart() {
 
           <div className="total">
             <h2 className="text-xl">Total Amount:</h2>
-            <h2>${totalPrice().toLocaleString()}.00</h2>
+            <h2>Rs. {totalPrice().toLocaleString()}.00</h2>
           </div>
 
 

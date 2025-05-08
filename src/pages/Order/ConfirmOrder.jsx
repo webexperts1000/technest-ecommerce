@@ -81,7 +81,7 @@ function ConfirmOrder() {
             <div className="summery_details">
               <div className="sub_total common">
                 <h3> subtotal </h3>
-                <h3> $ {sub_total} </h3>
+                <h3> Rs. {sub_total} </h3>
               </div>
               <div className="shipping_fee common">
                 <h3> shipping </h3>
@@ -89,7 +89,7 @@ function ConfirmOrder() {
               </div>
               <div className="grand_total common">
                 <h3> total </h3>
-                <h3> $ {grand_total} </h3>
+                <h3> Rs. {grand_total} </h3>
               </div>
             </div>
 

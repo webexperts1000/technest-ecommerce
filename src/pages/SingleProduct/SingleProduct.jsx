@@ -73,7 +73,7 @@ function SingleProduct() {
                     <p>{product.desc}</p>
 
                     <div className="price">
-                      <h3> $ {product.price} </h3>
+                      <h3> Rs. {product.price} </h3>
                     </div>
 
                     <div className="stock">
