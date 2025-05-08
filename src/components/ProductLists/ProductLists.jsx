@@ -13,6 +13,9 @@ import { toast } from "react-hot-toast";
 
 function ProductLists() {
   const { products } = useSelector((state) => ({ ...state.products }));
+
+  console.log("Loaded products:", products);
+
   const { error } = useSelector((state) => ({ ...state.wishlist }));
   const [quantity, setQuantity] = useState(1);
   const [list, setList] = React.useState(products);
@@ -36,6 +39,7 @@ function ProductLists() {
   }, [maxPrice]);
 
   React.useEffect(() => {
+    console.log("Dispatching getProducts()");
     dispatch(getProducts());
   }, []);
 
@@ -172,7 +176,7 @@ function ProductLists() {
               <h2 className="not_found"> No Products Found </h2>
             ) : (
               <>
-                {list.map((product) => (
+                {products.map((product) => ( //write list.map, not products
                   <React.Fragment key={product._id}>
                     <div className="box">
                       <div className="cat">
